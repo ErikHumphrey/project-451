@@ -69,11 +69,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bebas Neue Bold", 71.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(-5, -5);
+            this.label2.Location = new System.Drawing.Point(12, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(423, 115);
+            this.label2.Size = new System.Drawing.Size(406, 115);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Project 451";
+            this.label2.Text = "BOARDGAME";
             // 
             // label1
             // 
@@ -96,7 +96,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Name = "frmMenu";
-            this.Text = "Project 451";
+            this.Text = "board game";
             this.ResumeLayout(false);
             this.PerformLayout();
 

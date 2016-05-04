@@ -153,6 +153,7 @@
             this.pnlHome3.Name = "pnlHome3";
             this.pnlHome3.Size = new System.Drawing.Size(90, 90);
             this.pnlHome3.TabIndex = 8;
+            this.pnlHome3.Tag = "Home";
             // 
             // pnlTileRight1
             // 
@@ -178,6 +179,7 @@
             this.pnlHome2.Name = "pnlHome2";
             this.pnlHome2.Size = new System.Drawing.Size(90, 90);
             this.pnlHome2.TabIndex = 2;
+            this.pnlHome2.Tag = "Home";
             // 
             // pnlHome4
             // 
@@ -187,6 +189,7 @@
             this.pnlHome4.Name = "pnlHome4";
             this.pnlHome4.Size = new System.Drawing.Size(90, 90);
             this.pnlHome4.TabIndex = 6;
+            this.pnlHome4.Tag = "Home";
             // 
             // pnlTileBot6
             // 
@@ -204,6 +207,7 @@
             this.pnlHome1.Name = "pnlHome1";
             this.pnlHome1.Size = new System.Drawing.Size(90, 90);
             this.pnlHome1.TabIndex = 1;
+            this.pnlHome1.Tag = "Home";
             // 
             // pnlTileLeft1
             // 
