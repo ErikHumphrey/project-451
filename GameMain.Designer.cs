@@ -32,17 +32,17 @@
             this.lstGameLog = new System.Windows.Forms.ListBox();
             this.tmrRandomizer = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picRedPlayer = new System.Windows.Forms.PictureBox();
             this.pnlTileRight3 = new System.Windows.Forms.Panel();
             this.pnlTileLeft3 = new System.Windows.Forms.Panel();
             this.pnlTileRight2 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.pnlHome3 = new System.Windows.Forms.Panel();
             this.pnlTileRight1 = new System.Windows.Forms.Panel();
             this.pnlTileLeft2 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.pnlHome2 = new System.Windows.Forms.Panel();
+            this.pnlHome4 = new System.Windows.Forms.Panel();
             this.pnlTileBot6 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlHome1 = new System.Windows.Forms.Panel();
             this.pnlTileLeft1 = new System.Windows.Forms.Panel();
             this.pnlTileBot5 = new System.Windows.Forms.Panel();
             this.pnlTileTop6 = new System.Windows.Forms.Panel();
@@ -55,9 +55,9 @@
             this.pnlTileTop3 = new System.Windows.Forms.Panel();
             this.pnlTileTop2 = new System.Windows.Forms.Panel();
             this.pnlTileTop1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.picBluePlayer = new System.Windows.Forms.PictureBox();
+            this.picGreyPlayer = new System.Windows.Forms.PictureBox();
+            this.picGreenPlayer = new System.Windows.Forms.PictureBox();
             this.btnRollADie = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
@@ -75,14 +75,16 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel7.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.picRedPlayer)).BeginInit();
+            this.pnlHome3.SuspendLayout();
+            this.pnlHome2.SuspendLayout();
+            this.pnlHome4.SuspendLayout();
+            this.pnlHome1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBluePlayer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGreyPlayer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGreenPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // lstGameLog
@@ -108,16 +110,16 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Randomizing game board...";
             // 
-            // pictureBox1
+            // picRedPlayer
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::project_451.Properties.Resources.gnomehatred;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 57);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
+            this.picRedPlayer.BackColor = System.Drawing.Color.Transparent;
+            this.picRedPlayer.Image = global::project_451.Properties.Resources.gnomehatred;
+            this.picRedPlayer.Location = new System.Drawing.Point(20, 17);
+            this.picRedPlayer.Name = "picRedPlayer";
+            this.picRedPlayer.Size = new System.Drawing.Size(34, 57);
+            this.picRedPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picRedPlayer.TabIndex = 23;
+            this.picRedPlayer.TabStop = false;
             // 
             // pnlTileRight3
             // 
@@ -143,14 +145,14 @@
             this.pnlTileRight2.Size = new System.Drawing.Size(90, 90);
             this.pnlTileRight2.TabIndex = 20;
             // 
-            // panel7
+            // pnlHome3
             // 
-            this.panel7.BackgroundImage = global::project_451.Properties.Resources.iconHomeTile;
-            this.panel7.Controls.Add(this.pictureBox4);
-            this.panel7.Location = new System.Drawing.Point(800, 381);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(90, 90);
-            this.panel7.TabIndex = 8;
+            this.pnlHome3.BackgroundImage = global::project_451.Properties.Resources.iconHomeTile;
+            this.pnlHome3.Controls.Add(this.picGreenPlayer);
+            this.pnlHome3.Location = new System.Drawing.Point(800, 381);
+            this.pnlHome3.Name = "pnlHome3";
+            this.pnlHome3.Size = new System.Drawing.Size(90, 90);
+            this.pnlHome3.TabIndex = 8;
             // 
             // pnlTileRight1
             // 
@@ -168,23 +170,23 @@
             this.pnlTileLeft2.Size = new System.Drawing.Size(90, 90);
             this.pnlTileLeft2.TabIndex = 17;
             // 
-            // panel2
+            // pnlHome2
             // 
-            this.panel2.BackgroundImage = global::project_451.Properties.Resources.iconHomeTile;
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Location = new System.Drawing.Point(800, 21);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(90, 90);
-            this.panel2.TabIndex = 2;
+            this.pnlHome2.BackgroundImage = global::project_451.Properties.Resources.iconHomeTile;
+            this.pnlHome2.Controls.Add(this.picBluePlayer);
+            this.pnlHome2.Location = new System.Drawing.Point(800, 21);
+            this.pnlHome2.Name = "pnlHome2";
+            this.pnlHome2.Size = new System.Drawing.Size(90, 90);
+            this.pnlHome2.TabIndex = 2;
             // 
-            // panel8
+            // pnlHome4
             // 
-            this.panel8.BackgroundImage = global::project_451.Properties.Resources.iconHomeTile;
-            this.panel8.Controls.Add(this.pictureBox3);
-            this.panel8.Location = new System.Drawing.Point(170, 381);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(90, 90);
-            this.panel8.TabIndex = 6;
+            this.pnlHome4.BackgroundImage = global::project_451.Properties.Resources.iconHomeTile;
+            this.pnlHome4.Controls.Add(this.picGreyPlayer);
+            this.pnlHome4.Location = new System.Drawing.Point(170, 381);
+            this.pnlHome4.Name = "pnlHome4";
+            this.pnlHome4.Size = new System.Drawing.Size(90, 90);
+            this.pnlHome4.TabIndex = 6;
             // 
             // pnlTileBot6
             // 
@@ -194,14 +196,14 @@
             this.pnlTileBot6.Size = new System.Drawing.Size(90, 90);
             this.pnlTileBot6.TabIndex = 12;
             // 
-            // panel1
+            // pnlHome1
             // 
-            this.panel1.BackgroundImage = global::project_451.Properties.Resources.iconHomeTile;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(170, 21);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(90, 90);
-            this.panel1.TabIndex = 1;
+            this.pnlHome1.BackgroundImage = global::project_451.Properties.Resources.iconHomeTile;
+            this.pnlHome1.Controls.Add(this.picRedPlayer);
+            this.pnlHome1.Location = new System.Drawing.Point(170, 21);
+            this.pnlHome1.Name = "pnlHome1";
+            this.pnlHome1.Size = new System.Drawing.Size(90, 90);
+            this.pnlHome1.TabIndex = 1;
             // 
             // pnlTileLeft1
             // 
@@ -299,38 +301,38 @@
             this.pnlTileTop1.Size = new System.Drawing.Size(90, 90);
             this.pnlTileTop1.TabIndex = 0;
             // 
-            // pictureBox2
+            // picBluePlayer
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::project_451.Properties.Resources.gnomehatblue;
-            this.pictureBox2.Location = new System.Drawing.Point(30, 17);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(34, 57);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 24;
-            this.pictureBox2.TabStop = false;
+            this.picBluePlayer.BackColor = System.Drawing.Color.Transparent;
+            this.picBluePlayer.Image = global::project_451.Properties.Resources.gnomehatblue;
+            this.picBluePlayer.Location = new System.Drawing.Point(30, 17);
+            this.picBluePlayer.Name = "picBluePlayer";
+            this.picBluePlayer.Size = new System.Drawing.Size(34, 57);
+            this.picBluePlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBluePlayer.TabIndex = 24;
+            this.picBluePlayer.TabStop = false;
             // 
-            // pictureBox3
+            // picGreyPlayer
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::project_451.Properties.Resources.gnomehatgrey;
-            this.pictureBox3.Location = new System.Drawing.Point(20, 15);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(34, 57);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 25;
-            this.pictureBox3.TabStop = false;
+            this.picGreyPlayer.BackColor = System.Drawing.Color.Transparent;
+            this.picGreyPlayer.Image = global::project_451.Properties.Resources.gnomehatgrey;
+            this.picGreyPlayer.Location = new System.Drawing.Point(20, 15);
+            this.picGreyPlayer.Name = "picGreyPlayer";
+            this.picGreyPlayer.Size = new System.Drawing.Size(34, 57);
+            this.picGreyPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picGreyPlayer.TabIndex = 25;
+            this.picGreyPlayer.TabStop = false;
             // 
-            // pictureBox4
+            // picGreenPlayer
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::project_451.Properties.Resources.gnomehat;
-            this.pictureBox4.Location = new System.Drawing.Point(30, 15);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(34, 57);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 26;
-            this.pictureBox4.TabStop = false;
+            this.picGreenPlayer.BackColor = System.Drawing.Color.Transparent;
+            this.picGreenPlayer.Image = global::project_451.Properties.Resources.gnomehat;
+            this.picGreenPlayer.Location = new System.Drawing.Point(30, 15);
+            this.picGreenPlayer.Name = "picGreenPlayer";
+            this.picGreenPlayer.Size = new System.Drawing.Size(34, 57);
+            this.picGreenPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picGreenPlayer.TabIndex = 26;
+            this.picGreenPlayer.TabStop = false;
             // 
             // btnRollADie
             // 
@@ -342,6 +344,7 @@
             this.btnRollADie.TabIndex = 23;
             this.btnRollADie.Text = "Roll a die";
             this.btnRollADie.UseVisualStyleBackColor = true;
+            this.btnRollADie.Click += new System.EventHandler(this.btnRollADie_Click);
             // 
             // label4
             // 
@@ -439,9 +442,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(36, 296);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 13);
+            this.label8.Size = new System.Drawing.Size(60, 13);
             this.label8.TabIndex = 37;
-            this.label8.Text = "Green (CPU)";
+            this.label8.Text = "Grey (CPU)";
             // 
             // label9
             // 
@@ -483,11 +486,33 @@
             this.label12.TabIndex = 43;
             this.label12.Text = "1";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(53, 38);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 44;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(53, 67);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 45;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // frmGameMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1148, 493);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -509,13 +534,13 @@
             this.Controls.Add(this.pnlTileRight3);
             this.Controls.Add(this.pnlTileLeft3);
             this.Controls.Add(this.pnlTileRight2);
-            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.pnlHome3);
             this.Controls.Add(this.pnlTileRight1);
             this.Controls.Add(this.pnlTileLeft2);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.pnlHome2);
+            this.Controls.Add(this.pnlHome4);
             this.Controls.Add(this.pnlTileBot6);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlHome1);
             this.Controls.Add(this.pnlTileLeft1);
             this.Controls.Add(this.pnlTileBot5);
             this.Controls.Add(this.pnlTileTop6);
@@ -532,14 +557,14 @@
             this.Name = "frmGameMain";
             this.Text = "Project 451 - Bible Imbiber";
             this.Load += new System.EventHandler(this.frmGameMain_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRedPlayer)).EndInit();
+            this.pnlHome3.ResumeLayout(false);
+            this.pnlHome2.ResumeLayout(false);
+            this.pnlHome4.ResumeLayout(false);
+            this.pnlHome1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picBluePlayer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGreyPlayer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGreenPlayer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -554,10 +579,10 @@
         private System.Windows.Forms.ListBox lstGameLog;
         private System.Windows.Forms.Panel pnlTileTop5;
         private System.Windows.Forms.Panel pnlTileTop6;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel pnlHome1;
+        private System.Windows.Forms.Panel pnlHome2;
+        private System.Windows.Forms.Panel pnlHome3;
+        private System.Windows.Forms.Panel pnlHome4;
         private System.Windows.Forms.Panel pnlTileBot6;
         private System.Windows.Forms.Panel pnlTileBot5;
         private System.Windows.Forms.Panel pnlTileBot4;
@@ -572,10 +597,10 @@
         private System.Windows.Forms.Panel pnlTileRight1;
         private System.Windows.Forms.Timer tmrRandomizer;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox picRedPlayer;
+        private System.Windows.Forms.PictureBox picGreenPlayer;
+        private System.Windows.Forms.PictureBox picBluePlayer;
+        private System.Windows.Forms.PictureBox picGreyPlayer;
         private System.Windows.Forms.Button btnRollADie;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ProgressBar progressBar2;
@@ -593,5 +618,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
