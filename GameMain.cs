@@ -24,11 +24,11 @@ namespace project_451
         int greenTile = 12;
         int greyTile = 19;
 
-        int norm1 = 10;
-        int norm2 = 25;
-        int norm3 = 50;
-        int norm4 = 100;
-        int norm5 = 200;
+        int norm1 = 15;
+        int norm2 = 40;
+        int norm3 = 65;
+        int norm4 = 200;
+        int norm5 = 300;
 
         int turnDelay = 3;
 
@@ -791,14 +791,20 @@ namespace project_451
                 prgRedNorm.Value = prgRedNorm.Maximum;
             else
                 prgRedNorm.Value = redBooks;
+
+            lblRedBooks.Text = redBooks + " / " + redNorm;
         }
 
         public void booksLost()
         {
             if (redBooks < prgRedNorm.Minimum)
                 prgRedNorm.Value = 0;
+            else if (redBooks > prgRedNorm.Maximum)
+                prgRedNorm.Value = prgRedNorm.Maximum;
             else
                 prgRedNorm.Value = redBooks;
+
+            lblRedBooks.Text = redBooks + " / " + redNorm;
         }
 
         private void btnRollADie_Click(object sender, EventArgs e)
@@ -905,12 +911,14 @@ namespace project_451
             if (picRedPlayer.Parent.Tag.ToString() == "Teleport")
             {
                 lstGameLog.Items.Add("You land on a Teleport tile...");
+                lstGameLog.TopIndex = lstGameLog.Items.Count - 1;
                 tmrPortDelay.Start();
                 btnRollADie.Enabled = false;
             }
             else if (picRedPlayer.Parent.Tag.ToString() == "Roll")
             {
                 lstGameLog.Items.Add("You land on a Roll Again tile. Roll again.");
+                lstGameLog.TopIndex = lstGameLog.Items.Count - 1;
             }
             else if (picRedPlayer.Parent.Tag.ToString() == "Multi")
             {
@@ -921,7 +929,8 @@ namespace project_451
                 tmrTurnDelay.Start();
                 if (frmMulti.gotem) { lstGameLog.Items.Add("You got the question right and earned 10 books."); booksReceived(); }
                 else { lstGameLog.Items.Add("You got the question wrong and lost 20 books."); booksLost(); }
-                
+                lstGameLog.TopIndex = lstGameLog.Items.Count - 1;
+
 
             }
             else if (picRedPlayer.Parent.Tag.ToString() == "TF")
@@ -933,14 +942,16 @@ namespace project_451
                 tmrTurnDelay.Start();
                 if (frmTF.gotem) { lstGameLog.Items.Add("You got the question right and earned 10 books."); booksReceived(); }
                 else { lstGameLog.Items.Add("You got the question wrong and lost 10 books."); booksLost(); }
+                lstGameLog.TopIndex = lstGameLog.Items.Count - 1;
             }
             else if (picRedPlayer.Parent.Tag.ToString() == "Books")
             {
                 lstGameLog.Items.Add("You land on a Books tile.");
-                int booksAwarded = rnd.Next(399, 500);
+                int booksAwarded = rnd.Next(5, 21);
                 lstGameLog.Items.Add("You receive " + booksAwarded + " books.");
                 btnRollADie.Enabled = false;
                 tmrTurnDelay.Start();
+                lstGameLog.TopIndex = lstGameLog.Items.Count - 1;
             }
             else if (picRedPlayer.Parent.Tag.ToString() == "Quote")
             {
@@ -951,38 +962,44 @@ namespace project_451
                 tmrTurnDelay.Start();
                 if (frmQuote.gotem) { lstGameLog.Items.Add("You got the question right and earned 10 books."); booksReceived(); }
                 else { lstGameLog.Items.Add("You got the question wrong and lost 20 books."); booksLost(); }
+                lstGameLog.TopIndex = lstGameLog.Items.Count - 1;
             }
             else if (picRedPlayer.Parent.Tag.ToString() == "Home")
             {
                 btnRollADie.Enabled = false;
                 tmrTurnDelay.Start();
                 lstGameLog.Items.Add("You land on a Home tile.");
+                lstGameLog.TopIndex = lstGameLog.Items.Count - 1;
                 if (redBooks >= redNorm)
                 {
                     if (redNorm == norm1)
                     {
-                        redNorm = norm2;
+                        redNorm = prgRedNorm.Maximum = norm2;
+                        prgRedNorm.Minimum = norm1;
                         lstGameLog.Items.Add("You have completed Norm 1!");
                         lstGameLog.Items.Add("You need " + norm2 + " books to complete the next Norm.");
                         lblRedNorm.Text = "2";
                     }
                     else if (redNorm == norm2)
                     {
-                        redNorm = norm3;
+                        redNorm = prgRedNorm.Maximum = norm3;
+                        prgRedNorm.Minimum = norm2;
                         lstGameLog.Items.Add("You have completed Norm 2!");
                         lstGameLog.Items.Add("You need " + norm3 + " books to complete the next Norm.");
                         lblRedNorm.Text = "3";
                     }
                     else if (redNorm == norm3)
                     {
-                        redNorm = norm4;
+                        redNorm = prgRedNorm.Maximum = norm4;
+                        prgRedNorm.Minimum = norm3;
                         lstGameLog.Items.Add("You have completed Norm 3!");
                         lstGameLog.Items.Add("You need " + norm4 + " books to complete the next Norm.");
                         lblRedNorm.Text = "4";
                     }
                     else if (redNorm == norm4)
                     {
-                        redNorm = norm5;
+                        redNorm = prgRedNorm.Maximum = norm5;
+                        prgRedNorm.Minimum = norm4;
                         lstGameLog.Items.Add("You have completed Norm 4!");
                         lstGameLog.Items.Add("You need " + norm5 + " books to complete the next Norm.");
                         lblRedNorm.Text = "5";
@@ -993,7 +1010,11 @@ namespace project_451
                         lstGameLog.Items.Add("You win!");
                         lblRedNorm.Text = "W";
                         lblBlueNorm.Text = lblGreenNorm.Text = lblGreenNorm.Text = "L";
+                        MessageBox.Show("You win! Close and reopen the program to play again.", "Victory!");
+                        Application.Exit();
                     }
+
+                    lblRedBooks.Text = redBooks + " / " + redNorm;
                 }
                 else
                 {

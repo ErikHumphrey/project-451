@@ -50,6 +50,11 @@
             this.lblBlueNorm = new System.Windows.Forms.Label();
             this.lblGreenNorm = new System.Windows.Forms.Label();
             this.lblGreyNorm = new System.Windows.Forms.Label();
+            this.tmrPortDelay = new System.Windows.Forms.Timer(this.components);
+            this.lblHelp = new System.Windows.Forms.Label();
+            this.tmrTurnDelay = new System.Windows.Forms.Timer(this.components);
+            this.lblNoTime = new System.Windows.Forms.Label();
+            this.lblViewAnswers = new System.Windows.Forms.Label();
             this.pnlTileRight3 = new System.Windows.Forms.Panel();
             this.pnlTileLeft3 = new System.Windows.Forms.Panel();
             this.pnlTileRight2 = new System.Windows.Forms.Panel();
@@ -76,11 +81,7 @@
             this.pnlTileTop3 = new System.Windows.Forms.Panel();
             this.pnlTileTop2 = new System.Windows.Forms.Panel();
             this.pnlTileTop1 = new System.Windows.Forms.Panel();
-            this.tmrPortDelay = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.tmrTurnDelay = new System.Windows.Forms.Timer(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblViewAnswers = new System.Windows.Forms.Label();
+            this.lblConfused = new System.Windows.Forms.Label();
             this.pnlHome3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGreenPlayer)).BeginInit();
             this.pnlHome2.SuspendLayout();
@@ -265,6 +266,50 @@
             this.lblGreyNorm.Size = new System.Drawing.Size(24, 23);
             this.lblGreyNorm.TabIndex = 43;
             this.lblGreyNorm.Text = "1";
+            // 
+            // tmrPortDelay
+            // 
+            this.tmrPortDelay.Interval = 2000;
+            this.tmrPortDelay.Tick += new System.EventHandler(this.tmrPortDelay_Tick);
+            // 
+            // lblHelp
+            // 
+            this.lblHelp.AutoSize = true;
+            this.lblHelp.Location = new System.Drawing.Point(272, 274);
+            this.lblHelp.Name = "lblHelp";
+            this.lblHelp.Size = new System.Drawing.Size(517, 65);
+            this.lblHelp.TabIndex = 44;
+            this.lblHelp.Text = resources.GetString("lblHelp.Text");
+            this.lblHelp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tmrTurnDelay
+            // 
+            this.tmrTurnDelay.Interval = 1000;
+            this.tmrTurnDelay.Tick += new System.EventHandler(this.tmrTurnDelay_Tick);
+            // 
+            // lblNoTime
+            // 
+            this.lblNoTime.AutoSize = true;
+            this.lblNoTime.Location = new System.Drawing.Point(36, 427);
+            this.lblNoTime.Name = "lblNoTime";
+            this.lblNoTime.Size = new System.Drawing.Size(92, 26);
+            this.lblNoTime.TabIndex = 45;
+            this.lblNoTime.Text = "No time to try\r\nall 40+ questions?\r\n";
+            this.lblNoTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblViewAnswers
+            // 
+            this.lblViewAnswers.AutoSize = true;
+            this.lblViewAnswers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblViewAnswers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblViewAnswers.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblViewAnswers.Location = new System.Drawing.Point(19, 456);
+            this.lblViewAnswers.Name = "lblViewAnswers";
+            this.lblViewAnswers.Size = new System.Drawing.Size(130, 13);
+            this.lblViewAnswers.TabIndex = 46;
+            this.lblViewAnswers.Text = "Click here to view them all";
+            this.lblViewAnswers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblViewAnswers.Click += new System.EventHandler(this.lblViewAnswers_Click);
             // 
             // pnlTileRight3
             // 
@@ -494,58 +539,26 @@
             this.pnlTileTop1.Size = new System.Drawing.Size(90, 90);
             this.pnlTileTop1.TabIndex = 0;
             // 
-            // tmrPortDelay
+            // lblConfused
             // 
-            this.tmrPortDelay.Interval = 2000;
-            this.tmrPortDelay.Tick += new System.EventHandler(this.tmrPortDelay_Tick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(272, 280);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(517, 65);
-            this.label1.TabIndex = 44;
-            this.label1.Text = resources.GetString("label1.Text");
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tmrTurnDelay
-            // 
-            this.tmrTurnDelay.Interval = 1000;
-            this.tmrTurnDelay.Tick += new System.EventHandler(this.tmrTurnDelay_Tick);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 427);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 26);
-            this.label2.TabIndex = 45;
-            this.label2.Text = "No time to try\r\nall 40+ questions?\r\n";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblViewAnswers
-            // 
-            this.lblViewAnswers.AutoSize = true;
-            this.lblViewAnswers.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblViewAnswers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblViewAnswers.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblViewAnswers.Location = new System.Drawing.Point(19, 456);
-            this.lblViewAnswers.Name = "lblViewAnswers";
-            this.lblViewAnswers.Size = new System.Drawing.Size(130, 13);
-            this.lblViewAnswers.TabIndex = 46;
-            this.lblViewAnswers.Text = "Click here to view them all";
-            this.lblViewAnswers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblViewAnswers.Click += new System.EventHandler(this.lblViewAnswers_Click);
+            this.lblConfused.AutoSize = true;
+            this.lblConfused.Location = new System.Drawing.Point(324, 352);
+            this.lblConfused.Name = "lblConfused";
+            this.lblConfused.Size = new System.Drawing.Size(395, 13);
+            this.lblConfused.TabIndex = 47;
+            this.lblConfused.Text = "If you\'re still confused, just keep rolling the die and answering trivia. You can" +
+    "\'t lose.";
+            this.lblConfused.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmGameMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1163, 493);
+            this.Controls.Add(this.lblConfused);
             this.Controls.Add(this.lblViewAnswers);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblNoTime);
+            this.Controls.Add(this.lblHelp);
             this.Controls.Add(this.lblGreyNorm);
             this.Controls.Add(this.lblGreenNorm);
             this.Controls.Add(this.lblBlueNorm);
@@ -587,6 +600,7 @@
             this.Controls.Add(this.pnlTileTop3);
             this.Controls.Add(this.pnlTileTop2);
             this.Controls.Add(this.pnlTileTop1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmGameMain";
             this.Text = "Project 451";
             this.Load += new System.EventHandler(this.frmGameMain_Load);
@@ -652,9 +666,10 @@
         private System.Windows.Forms.Label lblGreenNorm;
         private System.Windows.Forms.Label lblGreyNorm;
         private System.Windows.Forms.Timer tmrPortDelay;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblHelp;
         private System.Windows.Forms.Timer tmrTurnDelay;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblNoTime;
         private System.Windows.Forms.Label lblViewAnswers;
+        private System.Windows.Forms.Label lblConfused;
     }
 }

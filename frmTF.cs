@@ -62,7 +62,7 @@ namespace project_451
 
         private void frmTF_Load(object sender, EventArgs e)
         {
-            question = rnd.Next(1, 13);
+            question = rnd.Next(1, 24);
             switch (question)
             {
                 case 1:
