@@ -52,6 +52,18 @@
     <Compile Include="frmMulti.Designer.cs">
       <DependentUpon>frmMulti.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQuote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuote.Designer.cs">
+      <DependentUpon>frmQuote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTF.Designer.cs">
+      <DependentUpon>frmTF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmMulti.resx">
       <DependentUpon>frmMulti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuote.resx">
+      <DependentUpon>frmQuote.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GameMain.resx">
       <DependentUpon>GameMain.cs</DependentUpon>

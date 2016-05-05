@@ -45,6 +45,7 @@
             this.btnAnswer1.TabIndex = 0;
             this.btnAnswer1.Text = "answer1";
             this.btnAnswer1.UseVisualStyleBackColor = false;
+            this.btnAnswer1.Click += new System.EventHandler(this.btnAnswer1_Click);
             // 
             // btnAnswer2
             // 
@@ -56,6 +57,7 @@
             this.btnAnswer2.TabIndex = 1;
             this.btnAnswer2.Text = "answer2";
             this.btnAnswer2.UseVisualStyleBackColor = false;
+            this.btnAnswer2.Click += new System.EventHandler(this.btnAnswer2_Click);
             // 
             // btnAnswer3
             // 
@@ -67,6 +69,7 @@
             this.btnAnswer3.TabIndex = 2;
             this.btnAnswer3.Text = "answer3";
             this.btnAnswer3.UseVisualStyleBackColor = false;
+            this.btnAnswer3.Click += new System.EventHandler(this.btnAnswer3_Click);
             // 
             // btnAnswer4
             // 
@@ -78,6 +81,7 @@
             this.btnAnswer4.TabIndex = 3;
             this.btnAnswer4.Text = "answer4";
             this.btnAnswer4.UseVisualStyleBackColor = false;
+            this.btnAnswer4.Click += new System.EventHandler(this.btnAnswer4_Click);
             // 
             // lblQuestion
             // 
@@ -112,6 +116,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Multiple Choice question";
+            this.Load += new System.EventHandler(this.frmMulti_Load);
             this.ResumeLayout(false);
 
         }

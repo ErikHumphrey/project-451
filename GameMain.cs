@@ -30,7 +30,7 @@ namespace project_451
         int norm4 = 100;
         int norm5 = 200;
 
-        int redBooks, redNorm, blueBooks, blueNorm, greenBooks, greenNorm, greyBooks, greyNorm;
+        public static int redBooks, redNorm, blueBooks, blueNorm, greenBooks, greenNorm, greyBooks, greyNorm;
 
         Random rnd = new Random();
         Image[] tile = new Image[11];
@@ -891,8 +891,12 @@ namespace project_451
             {
                 lstGameLog.Items.Add("You land on a Multiple Choice tile.");
                 frmMulti multiChoice = new frmMulti();
-                multiChoice.ShowDialog();
                 btnRollADie.Enabled = false;
+                multiChoice.ShowDialog();
+                if (frmMulti.gotem) { lstGameLog.Items.Add("You got the question right and earned 10 books."); booksReceived(); }
+                else { lstGameLog.Items.Add("You got the question wrong and lost 10 books."); booksLost(); }
+                
+
             }
             else if (picRedPlayer.Parent.Tag.ToString() == "TF")
             {
