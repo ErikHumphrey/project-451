@@ -24,15 +24,23 @@ namespace project_451
         int greenTile = 12;
         int greyTile = 19;
 
+        int norm1 = 10;
+        int norm2 = 25;
+        int norm3 = 50;
+        int norm4 = 100;
+        int norm5 = 200;
+
+        int redBooks, redNorm, blueBooks, blueNorm, greenBooks, greenNorm, greyBooks, greyNorm;
+
         Random rnd = new Random();
         Image[] tile = new Image[11];
         
         private void frmGameMain_Load(object sender, EventArgs e)
         {
-            //picRedPlayer.Parent = this;
-            //picBluePlayer.Parent = this;
-            //picGreenPlayer.Parent = this;
-            //picGreyPlayer.Parent = this;
+            redNorm = blueNorm = greenNorm = greyNorm = norm1;
+            redBooks = blueBooks = greenBooks = greyBooks = 0;
+            prgRedNorm.Maximum = prgBlueNorm.Maximum = prgGreenNorm.Maximum = prgGreyNorm.Maximum = norm1;
+            lblRedBooks.Text = lblBlueBooks.Text = lblGreenBooks.Text = lblGreyBooks.Text = "0 / " + norm1;
 
             picRedPlayer.Left -= 20;
             picBluePlayer.Left += 17;
@@ -719,6 +727,55 @@ namespace project_451
             }
         }
 
+        public void redTurn()
+        {
+            lstGameLog.Items.Add("It's your turn.");
+
+            switch (redNorm)
+            {
+                case 1:
+                    redBooks += 3;
+                    prgRedNorm.Value = redBooks;
+                    lstGameLog.Items.Add("You receive " + "3" + " books.");
+                    break;
+                case 2:
+                    redBooks += 5;
+                    lstGameLog.Items.Add("You receive " + "5" + " books.");
+                    break;
+                case 3:
+                    redBooks += 10;
+                    prgRedNorm.Value = redBooks;
+                    lstGameLog.Items.Add("You receive " + "10" + " books.");
+                    break;
+                case 4:
+                    redBooks += 20;
+                    lstGameLog.Items.Add("You receive " + "20" + " books.");
+                    break;
+                case 5:
+                    redBooks += 40;
+                    lstGameLog.Items.Add("You receive " + "40" + " books.");
+                    break;
+            }
+
+            booksReceived();
+        }
+
+        public void booksReceived()
+        {
+            if (redBooks > prgRedNorm.Maximum)
+                prgRedNorm.Value = prgRedNorm.Maximum;
+            else
+                prgRedNorm.Value = redBooks;
+        }
+
+        public void booksLost()
+        {
+            if (redBooks < prgRedNorm.Minimum)
+                prgRedNorm.Value = prgRedNorm.Minimum;
+            else
+                prgRedNorm.Value = redBooks;
+        }
+
         private void btnRollADie_Click(object sender, EventArgs e)
         {
             int roll = rnd.Next(1, 7);
@@ -824,22 +881,89 @@ namespace project_451
             {
                 lstGameLog.Items.Add("You land on a Teleport tile...");
                 tmrPortDelay.Start();
+                btnRollADie.Enabled = false;
             }
             else if (picRedPlayer.Parent.Tag.ToString() == "Roll")
             {
-                lstGameLog.Items.Add("And land on a Roll Again tile. Roll again.");
-            };
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            picRedPlayer.Location = new Point(170, 21);
-            picRedPlayer.BringToFront();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            picRedPlayer.Location = new Point(176, 21);
+                lstGameLog.Items.Add("You land on a Roll Again tile. Roll again.");
+            }
+            else if (picRedPlayer.Parent.Tag.ToString() == "Multi")
+            {
+                lstGameLog.Items.Add("You land on a Multiple Choice tile.");
+                frmMulti multiChoice = new frmMulti();
+                multiChoice.ShowDialog();
+                btnRollADie.Enabled = false;
+            }
+            else if (picRedPlayer.Parent.Tag.ToString() == "TF")
+            {
+                lstGameLog.Items.Add("You land on a True or False tile.");
+                frmMulti multiChoice = new frmMulti();
+                multiChoice.ShowDialog();
+                btnRollADie.Enabled = false;
+            }
+            else if (picRedPlayer.Parent.Tag.ToString() == "Books")
+            {
+                lstGameLog.Items.Add("You land on a Books tile.");
+                int booksAwarded = rnd.Next(399, 500);
+                lstGameLog.Items.Add("You receive " + booksAwarded + " books.");
+                frmMulti multiChoice = new frmMulti();
+                multiChoice.ShowDialog();
+                btnRollADie.Enabled = false;
+            }
+            else if (picRedPlayer.Parent.Tag.ToString() == "Quote")
+            {
+                lstGameLog.Items.Add("You land on a Quote tile.");
+                frmMulti multiChoice = new frmMulti();
+                multiChoice.ShowDialog();
+                btnRollADie.Enabled = false;
+            }
+            else if (picRedPlayer.Parent.Tag.ToString() == "Home")
+            {
+                btnRollADie.Enabled = false;
+                lstGameLog.Items.Add("You land on a Home tile.");
+                if (redBooks >= redNorm)
+                {
+                    if (redNorm == norm1)
+                    {
+                        redNorm = norm2;
+                        lstGameLog.Items.Add("You have completed Norm 1!");
+                        lstGameLog.Items.Add("You need " + norm2 + " books to complete the next Norm.");
+                        lblRedNorm.Text = "2";
+                    }
+                    else if (redNorm == norm2)
+                    {
+                        redNorm = norm3;
+                        lstGameLog.Items.Add("You have completed Norm 2!");
+                        lstGameLog.Items.Add("You need " + norm3 + " books to complete the next Norm.");
+                        lblRedNorm.Text = "3";
+                    }
+                    else if (redNorm == norm3)
+                    {
+                        redNorm = norm4;
+                        lstGameLog.Items.Add("You have completed Norm 3!");
+                        lstGameLog.Items.Add("You need " + norm4 + " books to complete the next Norm.");
+                        lblRedNorm.Text = "4";
+                    }
+                    else if (redNorm == norm4)
+                    {
+                        redNorm = norm5;
+                        lstGameLog.Items.Add("You have completed Norm 4!");
+                        lstGameLog.Items.Add("You need " + norm5 + " books to complete the next Norm.");
+                        lblRedNorm.Text = "5";
+                    }
+                    else if (redNorm == norm5)
+                    {
+                        lstGameLog.Items.Add("You have completed Norm 5!");
+                        lstGameLog.Items.Add("You win!");
+                        lblRedNorm.Text = "W";
+                        lblBlueNorm.Text = lblGreenNorm.Text = lblGreenNorm.Text = "L";
+                    }
+                }
+                else
+                {
+                    lstGameLog.Items.Add("You need " + (redNorm - redBooks) + " more books to complete your Norm.");
+                }
+            }
         }
 
         private void tmrPortDelay_Tick(object sender, EventArgs e)

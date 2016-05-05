@@ -33,22 +33,22 @@
             this.tmrRandomizer = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.btnRollADie = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
-            this.lblGreenStarCount = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.progressBar3 = new System.Windows.Forms.ProgressBar();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.progressBar4 = new System.Windows.Forms.ProgressBar();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblGreenName = new System.Windows.Forms.Label();
+            this.prgGreenNorm = new System.Windows.Forms.ProgressBar();
+            this.lblGreenBooks = new System.Windows.Forms.Label();
+            this.lblBlueBooks = new System.Windows.Forms.Label();
+            this.prgBlueNorm = new System.Windows.Forms.ProgressBar();
+            this.lblBlueName = new System.Windows.Forms.Label();
+            this.lblRedBooks = new System.Windows.Forms.Label();
+            this.prgRedNorm = new System.Windows.Forms.ProgressBar();
+            this.lblRedName = new System.Windows.Forms.Label();
+            this.lblGreyBooks = new System.Windows.Forms.Label();
+            this.prgGreyNorm = new System.Windows.Forms.ProgressBar();
+            this.lblGreyName = new System.Windows.Forms.Label();
+            this.lblRedNorm = new System.Windows.Forms.Label();
+            this.lblBlueNorm = new System.Windows.Forms.Label();
+            this.lblGreenNorm = new System.Windows.Forms.Label();
+            this.lblGreyNorm = new System.Windows.Forms.Label();
             this.pnlTileRight3 = new System.Windows.Forms.Panel();
             this.pnlTileLeft3 = new System.Windows.Forms.Panel();
             this.pnlTileRight2 = new System.Windows.Forms.Panel();
@@ -121,145 +121,145 @@
             this.btnRollADie.UseVisualStyleBackColor = true;
             this.btnRollADie.Click += new System.EventHandler(this.btnRollADie_Click);
             // 
-            // label4
+            // lblGreenName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 242);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 13);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "Green (CPU)";
+            this.lblGreenName.AutoSize = true;
+            this.lblGreenName.Location = new System.Drawing.Point(36, 242);
+            this.lblGreenName.Name = "lblGreenName";
+            this.lblGreenName.Size = new System.Drawing.Size(67, 13);
+            this.lblGreenName.TabIndex = 26;
+            this.lblGreenName.Text = "Green (CPU)";
             // 
-            // progressBar2
+            // prgGreenNorm
             // 
-            this.progressBar2.Location = new System.Drawing.Point(39, 258);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(114, 15);
-            this.progressBar2.TabIndex = 29;
+            this.prgGreenNorm.Location = new System.Drawing.Point(39, 258);
+            this.prgGreenNorm.Name = "prgGreenNorm";
+            this.prgGreenNorm.Size = new System.Drawing.Size(114, 15);
+            this.prgGreenNorm.TabIndex = 29;
             // 
-            // lblGreenStarCount
+            // lblGreenBooks
             // 
-            this.lblGreenStarCount.Location = new System.Drawing.Point(89, 276);
-            this.lblGreenStarCount.Name = "lblGreenStarCount";
-            this.lblGreenStarCount.Size = new System.Drawing.Size(67, 13);
-            this.lblGreenStarCount.TabIndex = 30;
-            this.lblGreenStarCount.Text = "0 / 100";
-            this.lblGreenStarCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblGreenBooks.Location = new System.Drawing.Point(89, 276);
+            this.lblGreenBooks.Name = "lblGreenBooks";
+            this.lblGreenBooks.Size = new System.Drawing.Size(67, 13);
+            this.lblGreenBooks.TabIndex = 30;
+            this.lblGreenBooks.Text = "0 / 100";
+            this.lblGreenBooks.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label6
+            // lblBlueBooks
             // 
-            this.label6.Location = new System.Drawing.Point(89, 222);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 13);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "0 / 100";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblBlueBooks.Location = new System.Drawing.Point(89, 222);
+            this.lblBlueBooks.Name = "lblBlueBooks";
+            this.lblBlueBooks.Size = new System.Drawing.Size(67, 13);
+            this.lblBlueBooks.TabIndex = 33;
+            this.lblBlueBooks.Text = "0 / 100";
+            this.lblBlueBooks.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // progressBar3
+            // prgBlueNorm
             // 
-            this.progressBar3.Location = new System.Drawing.Point(39, 204);
-            this.progressBar3.Name = "progressBar3";
-            this.progressBar3.Size = new System.Drawing.Size(114, 15);
-            this.progressBar3.TabIndex = 32;
+            this.prgBlueNorm.Location = new System.Drawing.Point(39, 204);
+            this.prgBlueNorm.Name = "prgBlueNorm";
+            this.prgBlueNorm.Size = new System.Drawing.Size(114, 15);
+            this.prgBlueNorm.TabIndex = 32;
             // 
-            // label7
+            // lblBlueName
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(36, 188);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 13);
-            this.label7.TabIndex = 31;
-            this.label7.Text = "Blue (CPU)";
+            this.lblBlueName.AutoSize = true;
+            this.lblBlueName.Location = new System.Drawing.Point(36, 188);
+            this.lblBlueName.Name = "lblBlueName";
+            this.lblBlueName.Size = new System.Drawing.Size(59, 13);
+            this.lblBlueName.TabIndex = 31;
+            this.lblBlueName.Text = "Blue (CPU)";
             // 
-            // label2
+            // lblRedBooks
             // 
-            this.label2.Location = new System.Drawing.Point(89, 170);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 13);
-            this.label2.TabIndex = 36;
-            this.label2.Text = "0 / 100";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblRedBooks.Location = new System.Drawing.Point(89, 170);
+            this.lblRedBooks.Name = "lblRedBooks";
+            this.lblRedBooks.Size = new System.Drawing.Size(67, 13);
+            this.lblRedBooks.TabIndex = 36;
+            this.lblRedBooks.Text = "0 / 100";
+            this.lblRedBooks.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // progressBar1
+            // prgRedNorm
             // 
-            this.progressBar1.Location = new System.Drawing.Point(39, 152);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(114, 15);
-            this.progressBar1.TabIndex = 35;
+            this.prgRedNorm.Location = new System.Drawing.Point(39, 152);
+            this.prgRedNorm.Name = "prgRedNorm";
+            this.prgRedNorm.Size = new System.Drawing.Size(114, 15);
+            this.prgRedNorm.TabIndex = 35;
             // 
-            // label3
+            // lblRedName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 136);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 13);
-            this.label3.TabIndex = 34;
-            this.label3.Text = "Red (YOU)";
+            this.lblRedName.AutoSize = true;
+            this.lblRedName.Location = new System.Drawing.Point(36, 136);
+            this.lblRedName.Name = "lblRedName";
+            this.lblRedName.Size = new System.Drawing.Size(59, 13);
+            this.lblRedName.TabIndex = 34;
+            this.lblRedName.Text = "Red (YOU)";
             // 
-            // label5
+            // lblGreyBooks
             // 
-            this.label5.Location = new System.Drawing.Point(89, 330);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 13);
-            this.label5.TabIndex = 39;
-            this.label5.Text = "0 / 100";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblGreyBooks.Location = new System.Drawing.Point(89, 330);
+            this.lblGreyBooks.Name = "lblGreyBooks";
+            this.lblGreyBooks.Size = new System.Drawing.Size(67, 13);
+            this.lblGreyBooks.TabIndex = 39;
+            this.lblGreyBooks.Text = "0 / 100";
+            this.lblGreyBooks.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // progressBar4
+            // prgGreyNorm
             // 
-            this.progressBar4.Location = new System.Drawing.Point(39, 312);
-            this.progressBar4.Name = "progressBar4";
-            this.progressBar4.Size = new System.Drawing.Size(114, 15);
-            this.progressBar4.TabIndex = 38;
+            this.prgGreyNorm.Location = new System.Drawing.Point(39, 312);
+            this.prgGreyNorm.Name = "prgGreyNorm";
+            this.prgGreyNorm.Size = new System.Drawing.Size(114, 15);
+            this.prgGreyNorm.TabIndex = 38;
             // 
-            // label8
+            // lblGreyName
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(36, 296);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 13);
-            this.label8.TabIndex = 37;
-            this.label8.Text = "Grey (CPU)";
+            this.lblGreyName.AutoSize = true;
+            this.lblGreyName.Location = new System.Drawing.Point(36, 296);
+            this.lblGreyName.Name = "lblGreyName";
+            this.lblGreyName.Size = new System.Drawing.Size(60, 13);
+            this.lblGreyName.TabIndex = 37;
+            this.lblGreyName.Text = "Grey (CPU)";
             // 
-            // label9
+            // lblRedNorm
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(8, 144);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(24, 23);
-            this.label9.TabIndex = 40;
-            this.label9.Text = "1";
+            this.lblRedNorm.AutoSize = true;
+            this.lblRedNorm.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRedNorm.Location = new System.Drawing.Point(8, 144);
+            this.lblRedNorm.Name = "lblRedNorm";
+            this.lblRedNorm.Size = new System.Drawing.Size(24, 23);
+            this.lblRedNorm.TabIndex = 40;
+            this.lblRedNorm.Text = "1";
             // 
-            // label10
+            // lblBlueNorm
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(8, 196);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(24, 23);
-            this.label10.TabIndex = 41;
-            this.label10.Text = "1";
+            this.lblBlueNorm.AutoSize = true;
+            this.lblBlueNorm.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBlueNorm.Location = new System.Drawing.Point(8, 196);
+            this.lblBlueNorm.Name = "lblBlueNorm";
+            this.lblBlueNorm.Size = new System.Drawing.Size(24, 23);
+            this.lblBlueNorm.TabIndex = 41;
+            this.lblBlueNorm.Text = "1";
             // 
-            // label11
+            // lblGreenNorm
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(8, 250);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(24, 23);
-            this.label11.TabIndex = 42;
-            this.label11.Text = "1";
+            this.lblGreenNorm.AutoSize = true;
+            this.lblGreenNorm.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGreenNorm.Location = new System.Drawing.Point(8, 250);
+            this.lblGreenNorm.Name = "lblGreenNorm";
+            this.lblGreenNorm.Size = new System.Drawing.Size(24, 23);
+            this.lblGreenNorm.TabIndex = 42;
+            this.lblGreenNorm.Text = "1";
             // 
-            // label12
+            // lblGreyNorm
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(8, 304);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(24, 23);
-            this.label12.TabIndex = 43;
-            this.label12.Text = "1";
+            this.lblGreyNorm.AutoSize = true;
+            this.lblGreyNorm.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGreyNorm.Location = new System.Drawing.Point(8, 304);
+            this.lblGreyNorm.Name = "lblGreyNorm";
+            this.lblGreyNorm.Size = new System.Drawing.Size(24, 23);
+            this.lblGreyNorm.TabIndex = 43;
+            this.lblGreyNorm.Text = "1";
             // 
             // pnlTileRight3
             // 
@@ -499,22 +499,22 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1148, 493);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.progressBar4);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.progressBar3);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.lblGreenStarCount);
-            this.Controls.Add(this.progressBar2);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblGreyNorm);
+            this.Controls.Add(this.lblGreenNorm);
+            this.Controls.Add(this.lblBlueNorm);
+            this.Controls.Add(this.lblRedNorm);
+            this.Controls.Add(this.lblGreyBooks);
+            this.Controls.Add(this.prgGreyNorm);
+            this.Controls.Add(this.lblGreyName);
+            this.Controls.Add(this.lblRedBooks);
+            this.Controls.Add(this.prgRedNorm);
+            this.Controls.Add(this.lblRedName);
+            this.Controls.Add(this.lblBlueBooks);
+            this.Controls.Add(this.prgBlueNorm);
+            this.Controls.Add(this.lblBlueName);
+            this.Controls.Add(this.lblGreenBooks);
+            this.Controls.Add(this.prgGreenNorm);
+            this.Controls.Add(this.lblGreenName);
             this.Controls.Add(this.btnRollADie);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlTileRight3);
@@ -588,22 +588,22 @@
         private System.Windows.Forms.PictureBox picBluePlayer;
         private System.Windows.Forms.PictureBox picGreyPlayer;
         private System.Windows.Forms.Button btnRollADie;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ProgressBar progressBar2;
-        private System.Windows.Forms.Label lblGreenStarCount;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ProgressBar progressBar3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ProgressBar progressBar4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblGreenName;
+        private System.Windows.Forms.ProgressBar prgGreenNorm;
+        private System.Windows.Forms.Label lblGreenBooks;
+        private System.Windows.Forms.Label lblBlueBooks;
+        private System.Windows.Forms.ProgressBar prgBlueNorm;
+        private System.Windows.Forms.Label lblBlueName;
+        private System.Windows.Forms.Label lblRedBooks;
+        private System.Windows.Forms.ProgressBar prgRedNorm;
+        private System.Windows.Forms.Label lblRedName;
+        private System.Windows.Forms.Label lblGreyBooks;
+        private System.Windows.Forms.ProgressBar prgGreyNorm;
+        private System.Windows.Forms.Label lblGreyName;
+        private System.Windows.Forms.Label lblRedNorm;
+        private System.Windows.Forms.Label lblBlueNorm;
+        private System.Windows.Forms.Label lblGreenNorm;
+        private System.Windows.Forms.Label lblGreyNorm;
         private System.Windows.Forms.Timer tmrPortDelay;
     }
 }
