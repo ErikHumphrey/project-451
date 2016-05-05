@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.btnPlayAI = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPlayAI
@@ -45,35 +45,16 @@
             this.btnPlayAI.UseVisualStyleBackColor = true;
             this.btnPlayAI.Click += new System.EventHandler(this.btnPlayAI_Click);
             // 
-            // button2
-            // 
-            this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(104, 166);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(215, 33);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Play hotseat multiplayer";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // button3
             // 
             this.button3.Enabled = false;
-            this.button3.Location = new System.Drawing.Point(104, 205);
+            this.button3.Location = new System.Drawing.Point(104, 166);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(215, 33);
             this.button3.TabIndex = 2;
             this.button3.Text = "Quit";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bebas Neue Bold", 71.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(406, 115);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "BOARDGAME";
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 
@@ -84,19 +65,33 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "by Erik Humphrey";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::project_451.Properties.Resources._451;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(406, 85);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(415, 246);
+            this.ClientSize = new System.Drawing.Size(409, 214);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnPlayAI);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmMenu";
-            this.Text = "board game";
+            this.ShowIcon = false;
+            this.Text = "Project 451";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,10 +100,9 @@
         #endregion
 
         private System.Windows.Forms.Button btnPlayAI;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

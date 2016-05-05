@@ -30,11 +30,35 @@ namespace project_451
         int norm4 = 100;
         int norm5 = 200;
 
+        int turnDelay = 3;
+
         public static int redBooks, redNorm, blueBooks, blueNorm, greenBooks, greenNorm, greyBooks, greyNorm;
 
         Random rnd = new Random();
         Image[] tile = new Image[11];
-        
+
+        private void tmrTurnDelay_Tick(object sender, EventArgs e)
+        {
+            if (turnDelay == 0)
+            {
+                btnRollADie.Text = "Roll a die";
+                btnRollADie.Enabled = true;
+                tmrTurnDelay.Stop();
+                lstGameLog.Items.Add("It's your turn.");
+                turnDelay = 3;
+            }
+            else
+            {
+                btnRollADie.Text = "Roll a die..." + turnDelay;
+                turnDelay--;
+            }
+        }
+
+        private void lblViewAnswers_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://docs.google.com/document/d/1bj3r-xUMvJnp3il5Q_pwIi5mOaXGD8OOx5DLypgZmFw/edit?usp=sharing");
+        }
+
         private void frmGameMain_Load(object sender, EventArgs e)
         {
             redNorm = blueNorm = greenNorm = greyNorm = norm1;
@@ -64,7 +88,8 @@ namespace project_451
             if (randomCount > 29)
             {
                 tmrRandomizer.Stop();
-                btnRollADie.Enabled = true;
+                lblRandom.Visible = false;
+                btnRollADie.Visible = true;
             }
             else
             {
@@ -893,6 +918,7 @@ namespace project_451
                 frmMulti multiChoice = new frmMulti();
                 btnRollADie.Enabled = false;
                 multiChoice.ShowDialog();
+                tmrTurnDelay.Start();
                 if (frmMulti.gotem) { lstGameLog.Items.Add("You got the question right and earned 10 books."); booksReceived(); }
                 else { lstGameLog.Items.Add("You got the question wrong and lost 20 books."); booksLost(); }
                 
@@ -904,8 +930,9 @@ namespace project_451
                 frmTF trueOrFalse = new frmTF();
                 btnRollADie.Enabled = false;
                 trueOrFalse.ShowDialog();
-                // if (frmTF.gotem) { lstGameLog.Items.Add("You got the question right and earned 10 books."); booksReceived(); }
-                // else { lstGameLog.Items.Add("You got the question wrong and lost 10 books."); booksLost(); }
+                tmrTurnDelay.Start();
+                if (frmTF.gotem) { lstGameLog.Items.Add("You got the question right and earned 10 books."); booksReceived(); }
+                else { lstGameLog.Items.Add("You got the question wrong and lost 10 books."); booksLost(); }
             }
             else if (picRedPlayer.Parent.Tag.ToString() == "Books")
             {
@@ -913,6 +940,7 @@ namespace project_451
                 int booksAwarded = rnd.Next(399, 500);
                 lstGameLog.Items.Add("You receive " + booksAwarded + " books.");
                 btnRollADie.Enabled = false;
+                tmrTurnDelay.Start();
             }
             else if (picRedPlayer.Parent.Tag.ToString() == "Quote")
             {
@@ -920,12 +948,14 @@ namespace project_451
                 frmQuote quoteAttribution = new frmQuote();
                 btnRollADie.Enabled = false;
                 quoteAttribution.ShowDialog();
+                tmrTurnDelay.Start();
                 if (frmQuote.gotem) { lstGameLog.Items.Add("You got the question right and earned 10 books."); booksReceived(); }
                 else { lstGameLog.Items.Add("You got the question wrong and lost 20 books."); booksLost(); }
             }
             else if (picRedPlayer.Parent.Tag.ToString() == "Home")
             {
                 btnRollADie.Enabled = false;
+                tmrTurnDelay.Start();
                 lstGameLog.Items.Add("You land on a Home tile.");
                 if (redBooks >= redNorm)
                 {
@@ -1083,6 +1113,7 @@ namespace project_451
                 lstGameLog.Items.Add("...and are teleported " + (resultLocation) + " tiles away!");
 
             tmrPortDelay.Stop();
+            tmrTurnDelay.Start();
         }
     }
 }

@@ -123,4 +123,14 @@
   <metadata name="tmrPortDelay.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>153, 17</value>
   </metadata>
+  <data name="label1.Text" xml:space="preserve">
+    <value>You are Red. When the progress bar on the left hand side is full, land on a home square to get the next goal.
+Completing the 5th goal wins the game. Read the game log on the right; it's useful. I didn't have enough
+time to make the 3 CPU players do anything, but they wouldn't be able to interfere with you winning
+anyway. I also didn't have enough time to make it so the same question is not repeated; sorry if that
+happens. Let me know in person if the game is horribly broken; I worked on it all week and didn't test it.</value>
+  </data>
+  <metadata name="tmrTurnDelay.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>277, 17</value>
+  </metadata>
 </root>

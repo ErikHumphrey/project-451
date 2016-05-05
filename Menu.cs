@@ -21,6 +21,12 @@ namespace project_451
         {
             Form frmGameMain = new frmGameMain();
             frmGameMain.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

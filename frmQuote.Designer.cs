@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.lblQuestion = new System.Windows.Forms.Label();
-            this.btnAnswer4 = new System.Windows.Forms.Button();
-            this.btnAnswer3 = new System.Windows.Forms.Button();
             this.btnAnswer2 = new System.Windows.Forms.Button();
             this.btnAnswer1 = new System.Windows.Forms.Button();
+            this.btnAnswer4 = new System.Windows.Forms.Button();
+            this.btnAnswer3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblQuestion
@@ -47,30 +47,6 @@
     "holder string Placeholder string Placeholder string Placeholder string Placehold" +
     "er string Placeholder string ";
             this.lblQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnAnswer4
-            // 
-            this.btnAnswer4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnAnswer4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnswer4.Location = new System.Drawing.Point(167, 268);
-            this.btnAnswer4.Name = "btnAnswer4";
-            this.btnAnswer4.Size = new System.Drawing.Size(340, 36);
-            this.btnAnswer4.TabIndex = 8;
-            this.btnAnswer4.Text = "answer4";
-            this.btnAnswer4.UseVisualStyleBackColor = false;
-            this.btnAnswer4.Click += new System.EventHandler(this.btnAnswer4_Click);
-            // 
-            // btnAnswer3
-            // 
-            this.btnAnswer3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnAnswer3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnswer3.Location = new System.Drawing.Point(167, 226);
-            this.btnAnswer3.Name = "btnAnswer3";
-            this.btnAnswer3.Size = new System.Drawing.Size(340, 36);
-            this.btnAnswer3.TabIndex = 7;
-            this.btnAnswer3.Text = "answer3";
-            this.btnAnswer3.UseVisualStyleBackColor = false;
-            this.btnAnswer3.Click += new System.EventHandler(this.btnAnswer3_Click);
             // 
             // btnAnswer2
             // 
@@ -95,6 +71,30 @@
             this.btnAnswer1.Text = "answer1";
             this.btnAnswer1.UseVisualStyleBackColor = false;
             this.btnAnswer1.Click += new System.EventHandler(this.btnAnswer1_Click);
+            // 
+            // btnAnswer4
+            // 
+            this.btnAnswer4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnAnswer4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnswer4.Location = new System.Drawing.Point(167, 268);
+            this.btnAnswer4.Name = "btnAnswer4";
+            this.btnAnswer4.Size = new System.Drawing.Size(340, 36);
+            this.btnAnswer4.TabIndex = 8;
+            this.btnAnswer4.Text = "answer4";
+            this.btnAnswer4.UseVisualStyleBackColor = false;
+            this.btnAnswer4.Click += new System.EventHandler(this.btnAnswer4_Click);
+            // 
+            // btnAnswer3
+            // 
+            this.btnAnswer3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnAnswer3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnswer3.Location = new System.Drawing.Point(167, 226);
+            this.btnAnswer3.Name = "btnAnswer3";
+            this.btnAnswer3.Size = new System.Drawing.Size(340, 36);
+            this.btnAnswer3.TabIndex = 7;
+            this.btnAnswer3.Text = "answer3";
+            this.btnAnswer3.UseVisualStyleBackColor = false;
+            this.btnAnswer3.Click += new System.EventHandler(this.btnAnswer3_Click);
             // 
             // frmQuote
             // 
@@ -124,9 +124,9 @@
         #endregion
 
         private System.Windows.Forms.Label lblQuestion;
-        private System.Windows.Forms.Button btnAnswer4;
-        private System.Windows.Forms.Button btnAnswer3;
         private System.Windows.Forms.Button btnAnswer2;
         private System.Windows.Forms.Button btnAnswer1;
+        private System.Windows.Forms.Button btnAnswer4;
+        private System.Windows.Forms.Button btnAnswer3;
     }
 }

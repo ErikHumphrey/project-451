@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGameMain));
             this.lstGameLog = new System.Windows.Forms.ListBox();
             this.tmrRandomizer = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblRandom = new System.Windows.Forms.Label();
             this.btnRollADie = new System.Windows.Forms.Button();
             this.lblGreenName = new System.Windows.Forms.Label();
             this.prgGreenNorm = new System.Windows.Forms.ProgressBar();
@@ -76,6 +77,10 @@
             this.pnlTileTop2 = new System.Windows.Forms.Panel();
             this.pnlTileTop1 = new System.Windows.Forms.Panel();
             this.tmrPortDelay = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.tmrTurnDelay = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblViewAnswers = new System.Windows.Forms.Label();
             this.pnlHome3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGreenPlayer)).BeginInit();
             this.pnlHome2.SuspendLayout();
@@ -99,19 +104,18 @@
             // 
             this.tmrRandomizer.Tick += new System.EventHandler(this.tmrRandomizer_Tick);
             // 
-            // label1
+            // lblRandom
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(321, 166);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(418, 35);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Randomizing game board...";
+            this.lblRandom.AutoSize = true;
+            this.lblRandom.Font = new System.Drawing.Font("Verdana", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRandom.Location = new System.Drawing.Point(321, 166);
+            this.lblRandom.Name = "lblRandom";
+            this.lblRandom.Size = new System.Drawing.Size(418, 35);
+            this.lblRandom.TabIndex = 22;
+            this.lblRandom.Text = "Randomizing game board...";
             // 
             // btnRollADie
             // 
-            this.btnRollADie.Enabled = false;
             this.btnRollADie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRollADie.Location = new System.Drawing.Point(444, 218);
             this.btnRollADie.Name = "btnRollADie";
@@ -119,12 +123,13 @@
             this.btnRollADie.TabIndex = 23;
             this.btnRollADie.Text = "Roll a die";
             this.btnRollADie.UseVisualStyleBackColor = true;
+            this.btnRollADie.Visible = false;
             this.btnRollADie.Click += new System.EventHandler(this.btnRollADie_Click);
             // 
             // lblGreenName
             // 
             this.lblGreenName.AutoSize = true;
-            this.lblGreenName.Location = new System.Drawing.Point(36, 242);
+            this.lblGreenName.Location = new System.Drawing.Point(36, 114);
             this.lblGreenName.Name = "lblGreenName";
             this.lblGreenName.Size = new System.Drawing.Size(67, 13);
             this.lblGreenName.TabIndex = 26;
@@ -132,14 +137,14 @@
             // 
             // prgGreenNorm
             // 
-            this.prgGreenNorm.Location = new System.Drawing.Point(39, 258);
+            this.prgGreenNorm.Location = new System.Drawing.Point(39, 130);
             this.prgGreenNorm.Name = "prgGreenNorm";
             this.prgGreenNorm.Size = new System.Drawing.Size(114, 15);
             this.prgGreenNorm.TabIndex = 29;
             // 
             // lblGreenBooks
             // 
-            this.lblGreenBooks.Location = new System.Drawing.Point(89, 276);
+            this.lblGreenBooks.Location = new System.Drawing.Point(89, 148);
             this.lblGreenBooks.Name = "lblGreenBooks";
             this.lblGreenBooks.Size = new System.Drawing.Size(67, 13);
             this.lblGreenBooks.TabIndex = 30;
@@ -148,7 +153,7 @@
             // 
             // lblBlueBooks
             // 
-            this.lblBlueBooks.Location = new System.Drawing.Point(89, 222);
+            this.lblBlueBooks.Location = new System.Drawing.Point(89, 94);
             this.lblBlueBooks.Name = "lblBlueBooks";
             this.lblBlueBooks.Size = new System.Drawing.Size(67, 13);
             this.lblBlueBooks.TabIndex = 33;
@@ -157,7 +162,7 @@
             // 
             // prgBlueNorm
             // 
-            this.prgBlueNorm.Location = new System.Drawing.Point(39, 204);
+            this.prgBlueNorm.Location = new System.Drawing.Point(39, 76);
             this.prgBlueNorm.Name = "prgBlueNorm";
             this.prgBlueNorm.Size = new System.Drawing.Size(114, 15);
             this.prgBlueNorm.TabIndex = 32;
@@ -165,7 +170,7 @@
             // lblBlueName
             // 
             this.lblBlueName.AutoSize = true;
-            this.lblBlueName.Location = new System.Drawing.Point(36, 188);
+            this.lblBlueName.Location = new System.Drawing.Point(36, 60);
             this.lblBlueName.Name = "lblBlueName";
             this.lblBlueName.Size = new System.Drawing.Size(59, 13);
             this.lblBlueName.TabIndex = 31;
@@ -173,7 +178,7 @@
             // 
             // lblRedBooks
             // 
-            this.lblRedBooks.Location = new System.Drawing.Point(89, 170);
+            this.lblRedBooks.Location = new System.Drawing.Point(89, 42);
             this.lblRedBooks.Name = "lblRedBooks";
             this.lblRedBooks.Size = new System.Drawing.Size(67, 13);
             this.lblRedBooks.TabIndex = 36;
@@ -182,7 +187,7 @@
             // 
             // prgRedNorm
             // 
-            this.prgRedNorm.Location = new System.Drawing.Point(39, 152);
+            this.prgRedNorm.Location = new System.Drawing.Point(39, 24);
             this.prgRedNorm.Name = "prgRedNorm";
             this.prgRedNorm.Size = new System.Drawing.Size(114, 15);
             this.prgRedNorm.TabIndex = 35;
@@ -190,15 +195,15 @@
             // lblRedName
             // 
             this.lblRedName.AutoSize = true;
-            this.lblRedName.Location = new System.Drawing.Point(36, 136);
+            this.lblRedName.Location = new System.Drawing.Point(36, 8);
             this.lblRedName.Name = "lblRedName";
-            this.lblRedName.Size = new System.Drawing.Size(59, 13);
+            this.lblRedName.Size = new System.Drawing.Size(55, 13);
             this.lblRedName.TabIndex = 34;
-            this.lblRedName.Text = "Red (YOU)";
+            this.lblRedName.Text = "Red (You)";
             // 
             // lblGreyBooks
             // 
-            this.lblGreyBooks.Location = new System.Drawing.Point(89, 330);
+            this.lblGreyBooks.Location = new System.Drawing.Point(89, 202);
             this.lblGreyBooks.Name = "lblGreyBooks";
             this.lblGreyBooks.Size = new System.Drawing.Size(67, 13);
             this.lblGreyBooks.TabIndex = 39;
@@ -207,7 +212,7 @@
             // 
             // prgGreyNorm
             // 
-            this.prgGreyNorm.Location = new System.Drawing.Point(39, 312);
+            this.prgGreyNorm.Location = new System.Drawing.Point(39, 184);
             this.prgGreyNorm.Name = "prgGreyNorm";
             this.prgGreyNorm.Size = new System.Drawing.Size(114, 15);
             this.prgGreyNorm.TabIndex = 38;
@@ -215,7 +220,7 @@
             // lblGreyName
             // 
             this.lblGreyName.AutoSize = true;
-            this.lblGreyName.Location = new System.Drawing.Point(36, 296);
+            this.lblGreyName.Location = new System.Drawing.Point(36, 168);
             this.lblGreyName.Name = "lblGreyName";
             this.lblGreyName.Size = new System.Drawing.Size(60, 13);
             this.lblGreyName.TabIndex = 37;
@@ -225,7 +230,7 @@
             // 
             this.lblRedNorm.AutoSize = true;
             this.lblRedNorm.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRedNorm.Location = new System.Drawing.Point(8, 144);
+            this.lblRedNorm.Location = new System.Drawing.Point(8, 16);
             this.lblRedNorm.Name = "lblRedNorm";
             this.lblRedNorm.Size = new System.Drawing.Size(24, 23);
             this.lblRedNorm.TabIndex = 40;
@@ -235,7 +240,7 @@
             // 
             this.lblBlueNorm.AutoSize = true;
             this.lblBlueNorm.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBlueNorm.Location = new System.Drawing.Point(8, 196);
+            this.lblBlueNorm.Location = new System.Drawing.Point(8, 68);
             this.lblBlueNorm.Name = "lblBlueNorm";
             this.lblBlueNorm.Size = new System.Drawing.Size(24, 23);
             this.lblBlueNorm.TabIndex = 41;
@@ -245,7 +250,7 @@
             // 
             this.lblGreenNorm.AutoSize = true;
             this.lblGreenNorm.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGreenNorm.Location = new System.Drawing.Point(8, 250);
+            this.lblGreenNorm.Location = new System.Drawing.Point(8, 122);
             this.lblGreenNorm.Name = "lblGreenNorm";
             this.lblGreenNorm.Size = new System.Drawing.Size(24, 23);
             this.lblGreenNorm.TabIndex = 42;
@@ -255,7 +260,7 @@
             // 
             this.lblGreyNorm.AutoSize = true;
             this.lblGreyNorm.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGreyNorm.Location = new System.Drawing.Point(8, 304);
+            this.lblGreyNorm.Location = new System.Drawing.Point(8, 176);
             this.lblGreyNorm.Name = "lblGreyNorm";
             this.lblGreyNorm.Size = new System.Drawing.Size(24, 23);
             this.lblGreyNorm.TabIndex = 43;
@@ -494,11 +499,53 @@
             this.tmrPortDelay.Interval = 2000;
             this.tmrPortDelay.Tick += new System.EventHandler(this.tmrPortDelay_Tick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(272, 280);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(517, 65);
+            this.label1.TabIndex = 44;
+            this.label1.Text = resources.GetString("label1.Text");
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tmrTurnDelay
+            // 
+            this.tmrTurnDelay.Interval = 1000;
+            this.tmrTurnDelay.Tick += new System.EventHandler(this.tmrTurnDelay_Tick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(36, 427);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 26);
+            this.label2.TabIndex = 45;
+            this.label2.Text = "No time to try\r\nall 40+ questions?\r\n";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblViewAnswers
+            // 
+            this.lblViewAnswers.AutoSize = true;
+            this.lblViewAnswers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblViewAnswers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblViewAnswers.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblViewAnswers.Location = new System.Drawing.Point(19, 456);
+            this.lblViewAnswers.Name = "lblViewAnswers";
+            this.lblViewAnswers.Size = new System.Drawing.Size(130, 13);
+            this.lblViewAnswers.TabIndex = 46;
+            this.lblViewAnswers.Text = "Click here to view them all";
+            this.lblViewAnswers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblViewAnswers.Click += new System.EventHandler(this.lblViewAnswers_Click);
+            // 
             // frmGameMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1163, 493);
+            this.Controls.Add(this.lblViewAnswers);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblGreyNorm);
             this.Controls.Add(this.lblGreenNorm);
             this.Controls.Add(this.lblBlueNorm);
@@ -516,7 +563,7 @@
             this.Controls.Add(this.prgGreenNorm);
             this.Controls.Add(this.lblGreenName);
             this.Controls.Add(this.btnRollADie);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblRandom);
             this.Controls.Add(this.pnlTileRight3);
             this.Controls.Add(this.pnlTileLeft3);
             this.Controls.Add(this.pnlTileRight2);
@@ -541,7 +588,7 @@
             this.Controls.Add(this.pnlTileTop2);
             this.Controls.Add(this.pnlTileTop1);
             this.Name = "frmGameMain";
-            this.Text = "Project 451 - Bible Imbiber";
+            this.Text = "Project 451";
             this.Load += new System.EventHandler(this.frmGameMain_Load);
             this.pnlHome3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picGreenPlayer)).EndInit();
@@ -582,7 +629,7 @@
         private System.Windows.Forms.Panel pnlTileRight2;
         private System.Windows.Forms.Panel pnlTileRight1;
         private System.Windows.Forms.Timer tmrRandomizer;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblRandom;
         private System.Windows.Forms.PictureBox picRedPlayer;
         private System.Windows.Forms.PictureBox picGreenPlayer;
         private System.Windows.Forms.PictureBox picBluePlayer;
@@ -605,5 +652,9 @@
         private System.Windows.Forms.Label lblGreenNorm;
         private System.Windows.Forms.Label lblGreyNorm;
         private System.Windows.Forms.Timer tmrPortDelay;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer tmrTurnDelay;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblViewAnswers;
     }
 }

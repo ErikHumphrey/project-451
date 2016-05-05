@@ -84,6 +84,9 @@
     <EmbeddedResource Include="frmQuote.resx">
       <DependentUpon>frmQuote.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTF.resx">
+      <DependentUpon>frmTF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GameMain.resx">
       <DependentUpon>GameMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +151,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gnomehatred.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\451.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

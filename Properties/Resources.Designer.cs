@@ -63,6 +63,16 @@ namespace project_451.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _451 {
+            get {
+                object obj = ResourceManager.GetObject("451", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bookstile {
             get {
                 object obj = ResourceManager.GetObject("bookstile", resourceCulture);
