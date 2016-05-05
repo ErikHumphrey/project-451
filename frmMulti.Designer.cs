@@ -39,7 +39,7 @@
             // 
             this.btnAnswer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnAnswer1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnswer1.Location = new System.Drawing.Point(167, 135);
+            this.btnAnswer1.Location = new System.Drawing.Point(167, 142);
             this.btnAnswer1.Name = "btnAnswer1";
             this.btnAnswer1.Size = new System.Drawing.Size(340, 36);
             this.btnAnswer1.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             this.btnAnswer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnAnswer2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnswer2.Location = new System.Drawing.Point(167, 177);
+            this.btnAnswer2.Location = new System.Drawing.Point(167, 184);
             this.btnAnswer2.Name = "btnAnswer2";
             this.btnAnswer2.Size = new System.Drawing.Size(340, 36);
             this.btnAnswer2.TabIndex = 1;
@@ -63,7 +63,7 @@
             // 
             this.btnAnswer3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnAnswer3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnswer3.Location = new System.Drawing.Point(167, 219);
+            this.btnAnswer3.Location = new System.Drawing.Point(167, 226);
             this.btnAnswer3.Name = "btnAnswer3";
             this.btnAnswer3.Size = new System.Drawing.Size(340, 36);
             this.btnAnswer3.TabIndex = 2;
@@ -75,7 +75,7 @@
             // 
             this.btnAnswer4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnAnswer4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnswer4.Location = new System.Drawing.Point(167, 261);
+            this.btnAnswer4.Location = new System.Drawing.Point(167, 268);
             this.btnAnswer4.Name = "btnAnswer4";
             this.btnAnswer4.Size = new System.Drawing.Size(340, 36);
             this.btnAnswer4.TabIndex = 3;
@@ -87,7 +87,7 @@
             // 
             this.lblQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuestion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(179)))), ((int)(((byte)(113)))));
-            this.lblQuestion.Location = new System.Drawing.Point(91, 24);
+            this.lblQuestion.Location = new System.Drawing.Point(91, 31);
             this.lblQuestion.Name = "lblQuestion";
             this.lblQuestion.Size = new System.Drawing.Size(493, 90);
             this.lblQuestion.TabIndex = 4;
@@ -115,7 +115,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Multiple Choice question";
+            this.Text = "Multiple Choice";
             this.Load += new System.EventHandler(this.frmMulti_Load);
             this.ResumeLayout(false);
 

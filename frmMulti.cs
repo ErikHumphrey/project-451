@@ -126,7 +126,7 @@ namespace project_451
             else
             {
                 gotem = false;
-                frmGameMain.redBooks += 20;
+                frmGameMain.redBooks -= 20;
             }
 
             this.Close();
@@ -142,7 +142,7 @@ namespace project_451
             else
             {
                 gotem = false;
-                frmGameMain.redBooks += 20;
+                frmGameMain.redBooks -= 20;
             }
 
             this.Close();
@@ -158,7 +158,7 @@ namespace project_451
             else
             {
                 gotem = false;
-                frmGameMain.redBooks += 20;
+                frmGameMain.redBooks -= 20;
             }
 
             this.Close();
@@ -174,7 +174,7 @@ namespace project_451
             else
             {
                 gotem = false;
-                frmGameMain.redBooks += 20;
+                frmGameMain.redBooks -= 20;
             }
 
             this.Close();

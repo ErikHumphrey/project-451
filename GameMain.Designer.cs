@@ -90,9 +90,9 @@
             // 
             this.lstGameLog.Dock = System.Windows.Forms.DockStyle.Right;
             this.lstGameLog.FormattingEnabled = true;
-            this.lstGameLog.Location = new System.Drawing.Point(931, 0);
+            this.lstGameLog.Location = new System.Drawing.Point(912, 0);
             this.lstGameLog.Name = "lstGameLog";
-            this.lstGameLog.Size = new System.Drawing.Size(217, 493);
+            this.lstGameLog.Size = new System.Drawing.Size(251, 493);
             this.lstGameLog.TabIndex = 3;
             // 
             // tmrRandomizer
@@ -498,7 +498,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1148, 493);
+            this.ClientSize = new System.Drawing.Size(1163, 493);
             this.Controls.Add(this.lblGreyNorm);
             this.Controls.Add(this.lblGreenNorm);
             this.Controls.Add(this.lblBlueNorm);

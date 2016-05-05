@@ -771,7 +771,7 @@ namespace project_451
         public void booksLost()
         {
             if (redBooks < prgRedNorm.Minimum)
-                prgRedNorm.Value = prgRedNorm.Minimum;
+                prgRedNorm.Value = 0;
             else
                 prgRedNorm.Value = redBooks;
         }
@@ -894,32 +894,34 @@ namespace project_451
                 btnRollADie.Enabled = false;
                 multiChoice.ShowDialog();
                 if (frmMulti.gotem) { lstGameLog.Items.Add("You got the question right and earned 10 books."); booksReceived(); }
-                else { lstGameLog.Items.Add("You got the question wrong and lost 10 books."); booksLost(); }
+                else { lstGameLog.Items.Add("You got the question wrong and lost 20 books."); booksLost(); }
                 
 
             }
             else if (picRedPlayer.Parent.Tag.ToString() == "TF")
             {
                 lstGameLog.Items.Add("You land on a True or False tile.");
-                frmMulti multiChoice = new frmMulti();
-                multiChoice.ShowDialog();
+                frmTF trueOrFalse = new frmTF();
                 btnRollADie.Enabled = false;
+                trueOrFalse.ShowDialog();
+                // if (frmTF.gotem) { lstGameLog.Items.Add("You got the question right and earned 10 books."); booksReceived(); }
+                // else { lstGameLog.Items.Add("You got the question wrong and lost 10 books."); booksLost(); }
             }
             else if (picRedPlayer.Parent.Tag.ToString() == "Books")
             {
                 lstGameLog.Items.Add("You land on a Books tile.");
                 int booksAwarded = rnd.Next(399, 500);
                 lstGameLog.Items.Add("You receive " + booksAwarded + " books.");
-                frmMulti multiChoice = new frmMulti();
-                multiChoice.ShowDialog();
                 btnRollADie.Enabled = false;
             }
             else if (picRedPlayer.Parent.Tag.ToString() == "Quote")
             {
                 lstGameLog.Items.Add("You land on a Quote tile.");
-                frmMulti multiChoice = new frmMulti();
-                multiChoice.ShowDialog();
+                frmQuote quoteAttribution = new frmQuote();
                 btnRollADie.Enabled = false;
+                quoteAttribution.ShowDialog();
+                if (frmQuote.gotem) { lstGameLog.Items.Add("You got the question right and earned 10 books."); booksReceived(); }
+                else { lstGameLog.Items.Add("You got the question wrong and lost 20 books."); booksLost(); }
             }
             else if (picRedPlayer.Parent.Tag.ToString() == "Home")
             {
