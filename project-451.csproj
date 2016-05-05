@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmMulti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMulti.Designer.cs">
+      <DependentUpon>frmMulti.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmMulti.resx">
+      <DependentUpon>frmMulti.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GameMain.resx">
       <DependentUpon>GameMain.cs</DependentUpon>
     </EmbeddedResource>

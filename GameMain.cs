@@ -820,8 +820,15 @@ namespace project_451
 
             lstGameLog.Items.Add("You roll a " + roll + ".");
 
-            button1.Text = (redTile + roll).ToString();
-            button2.Text = redTile.ToString();
+            if (picRedPlayer.Parent.Tag.ToString() == "Teleport")
+            {
+                lstGameLog.Items.Add("You land on a Teleport tile...");
+                tmrPortDelay.Start();
+            }
+            else if (picRedPlayer.Parent.Tag.ToString() == "Roll")
+            {
+                lstGameLog.Items.Add("And land on a Roll Again tile. Roll again.");
+            };
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -833,6 +840,119 @@ namespace project_451
         private void button1_Click(object sender, EventArgs e)
         {
             picRedPlayer.Location = new Point(176, 21);
+        }
+
+        private void tmrPortDelay_Tick(object sender, EventArgs e)
+        {
+            int teleportLocation = rnd.Next(1, 29);
+            int savedLocation = redTile;
+            redTile = teleportLocation;
+
+            switch (redTile)
+            {
+                case 1:
+                    picRedPlayer.Parent = pnlHome1;
+                    break;
+                case 2:
+                    picRedPlayer.Parent = pnlTileTop1;
+                    break;
+                case 3:
+                    picRedPlayer.Parent = pnlTileTop2;
+                    break;
+                case 4:
+                    picRedPlayer.Parent = pnlTileTop3;
+                    break;
+                case 5:
+                    picRedPlayer.Parent = pnlTileTop6;
+                    break;
+                case 6:
+                    picRedPlayer.Parent = pnlTileTop5;
+                    break;
+                case 7:
+                    picRedPlayer.Parent = pnlTileTop6;
+                    break;
+                case 8:
+                    picRedPlayer.Parent = pnlHome2;
+                    break;
+                case 9:
+                    picRedPlayer.Parent = pnlTileRight1;
+                    break;
+                case 10:
+                    picRedPlayer.Parent = pnlTileRight2;
+                    break;
+                case 11:
+                    picRedPlayer.Parent = pnlTileRight3;
+                    break;
+                case 12:
+                    picRedPlayer.Parent = pnlHome3;
+                    break;
+                case 13:
+                    picRedPlayer.Parent = pnlTileBot6;
+                    break;
+                case 14:
+                    picRedPlayer.Parent = pnlTileBot5;
+                    break;
+                case 15:
+                    picRedPlayer.Parent = pnlTileBot4;
+                    break;
+                case 16:
+                    picRedPlayer.Parent = pnlTileBot3;
+                    break;
+                case 17:
+                    picRedPlayer.Parent = pnlTileBot2;
+                    break;
+                case 18:
+                    picRedPlayer.Parent = pnlTileBot1;
+                    break;
+                case 19:
+                    picRedPlayer.Parent = pnlHome4;
+                    break;
+                case 20:
+                    picRedPlayer.Parent = pnlTileLeft3;
+                    break;
+                case 21:
+                    picRedPlayer.Parent = pnlTileLeft2;
+                    break;
+                case 22:
+                    picRedPlayer.Parent = pnlTileLeft1;
+                    break;
+                case 23:
+                    picRedPlayer.Parent = pnlHome1;
+                    redTile = 1;
+                    break;
+                case 24:
+                    picRedPlayer.Parent = pnlTileTop1;
+                    redTile = 2;
+                    break;
+                case 25:
+                    picRedPlayer.Parent = pnlTileTop2;
+                    redTile = 3;
+                    break;
+                case 26:
+                    picRedPlayer.Parent = pnlTileTop3;
+                    redTile = 4;
+                    break;
+                case 27:
+                    picRedPlayer.Parent = pnlTileTop6;
+                    redTile = 5;
+                    break;
+                case 28:
+                    picRedPlayer.Parent = pnlTileTop5;
+                    redTile = 6;
+                    break;
+            }
+
+            int resultLocation = teleportLocation - savedLocation;
+
+            if (resultLocation < 0)
+                resultLocation *= -1;
+
+            if (resultLocation == 0)
+                lstGameLog.Items.Add("...and are teleported THE SAME SPOT!");
+            else
+                lstGameLog.Items.Add("...and are teleported " + (resultLocation) + " tiles away!");
+
+            tmrPortDelay.Stop();
         }
     }
 }
